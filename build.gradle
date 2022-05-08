@@ -567,7 +567,7 @@ task createTenant(group: ofbizServer, description: 'Create a new tenant in your 
 // ========== Documentation tasks ==========
 tasks.withType(AsciidoctorTask) { task ->
     backends 'html5', 'pdf'
-    attributes \
+    attributes (
         'doctype': 'book',
         'experimental': '',
         'icons': 'font',
@@ -575,6 +575,7 @@ tasks.withType(AsciidoctorTask) { task ->
         'chapter-label': '',
         'toc': 'left@',
         'toclevels': '3'
+    )
 }
 
 task deleteOfbizDocumentation {
